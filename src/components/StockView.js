@@ -29,8 +29,8 @@ export default class StockView extends Component {
 
   render() {
     let { stock } = this.state;
-    console.log('stock:', stock);
     if(stock) {
+      console.log('stock:', stock);
     }
     return (
       <div className="container">

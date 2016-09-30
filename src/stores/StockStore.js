@@ -16,7 +16,7 @@ class StockStore extends EventEmitter {
           this.emit('CHANGE');
           break;
         case 'RECEIVE_STOCK':
-          let _stock = action.payload.stock;
+          _stock = action.payload.stock;
           this.emit('CHANGE');
           break;
       }
