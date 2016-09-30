@@ -1,9 +1,17 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import App from './components/App';
+import CompanyList from './components/CompanyList';
+import StockView from './components/StockView';
 
 render(
-  <App />,
+  <Router history = {browserHistory}>
+    <Route path = '/' component = {App}>
+      <Route path = 'stock/:symbol' component = {StockView} />
+    </Route>
+      <Route path = 'companies' component = {CompanyList}/>
+  </Router>,
   document.getElementById('root')
 )
