@@ -8,7 +8,7 @@ import StockView from './components/StockView';
 
 render(
   <Router history = {browserHistory}>
-    <Route path = 'Stock_Tracker_Flux_React-router/' component = {App}>
+    <Route path = '/Stock_Tracker_Flux_React-router/' component = {App}>
       <Route path = 'stock' component = {StockView} />
     </Route>
     <Route path = 'companies' component = {CompanyList}/>
