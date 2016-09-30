@@ -44,7 +44,7 @@ export default class CompanyList extends Component {
             <td>{Name}</td>
             <td>{Exchange}</td>
             <td>
-              <Link to='/stock'>
+              <Link to='/Stock_Tracker_Flux_React-router/stock'>
                 <button className="btn btn-xs btn-info" onClick={()=>this.searchStock(Symbol)}>
                   <i className='glyphicon glyphicon-usd'></i>
                 </button>
