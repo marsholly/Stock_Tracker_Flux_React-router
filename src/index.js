@@ -9,7 +9,7 @@ import StockView from './components/StockView';
 render(
   <Router history = {browserHistory}>
     <Route path = '/' component = {App}>
-      <Route path = 'stock/:symbol' component = {StockView} />
+      <Route path = 'stock' component = {StockView} />
     </Route>
       <Route path = 'companies' component = {CompanyList}/>
   </Router>,

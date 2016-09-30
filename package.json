@@ -24,6 +24,7 @@
     "jquery": "^3.1.1",
     "jsonp": "^0.2.0",
     "material-ui": "^0.15.4",
+    "moment": "^2.15.1",
     "node-sass": "^3.10.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",

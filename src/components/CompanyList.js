@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import StockStore from '../stores/StockStore';
+import StockActions from '../actions/StockActions';
 import { Link } from 'react-router';
 
 export default class CompanyList extends Component {
@@ -10,6 +11,7 @@ export default class CompanyList extends Component {
     }
 
     this._onChange = this._onChange.bind(this);
+    this.searchStock = this.searchStock.bind(this);
   }
 
   componentWillMount() {
@@ -26,6 +28,10 @@ export default class CompanyList extends Component {
     })
   }
 
+  searchStock(symbol) {
+    StockActions.lookUpStock(symbol);
+  }
+
   render() {
     let { companies } = this.state;
     let rows;
@@ -38,8 +44,8 @@ export default class CompanyList extends Component {
             <td>{Name}</td>
             <td>{Exchange}</td>
             <td>
-              <Link to={`/stock/${Symbol}`}>
-                <button className="btn btn-xs btn-info">
+              <Link to='/stock'>
+                <button className="btn btn-xs btn-info" onClick={()=>this.searchStock(Symbol)}>
                   <i className='glyphicon glyphicon-usd'></i>
                 </button>
               </Link>
