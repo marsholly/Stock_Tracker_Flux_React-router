@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   entry: [
@@ -7,9 +8,9 @@ module.exports = {
     './src/index.js',
   ],
   output: {
-    path: __dirname + '/build',
-    publicPath: 'build/',
-    filename: 'bundle.js'
+    path: path.join(__dirname, 'build'),
+    filename: 'bundle.js',
+    publicPath: '/build/'
   },
   devtool: 'inline-source-map',
   devServer: {
